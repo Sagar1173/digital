@@ -123,7 +123,7 @@ export default function ServicesPage() {
   </span>
 </h1>
           <p className="mt-8 px-1text-lg md:text-xl text-muted-foreground max-w-2xl">
-            From strategy and content to ads and websites — eight specialized services delivered by one in-house team.
+            From strategy and content to ads and websites eight specialized services delivered by one in-house team.
           </p>
         </div>
       </section>

@@ -10,7 +10,7 @@ export default function SiteFooter() {
           Let's build something worth watching.
         </h2>
         <p className="mt-8 text-lg max-w-2xl text-foreground/80">
-          Tell us about your brand. We'll come back with a tailored plan and a quote — usually within 48 hours.
+          Tell us about your brand. We'll come back with a tailored plan and a quote usually within 48 hours.
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <Link href="/quote" className="inline-flex items-center gap-1.5 bg-foreground text-background px-6 py-3.5 font-semibold rounded-md hover:bg-foreground/90">

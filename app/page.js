@@ -22,7 +22,7 @@ const services = [
   { icon: Video, title: "Video Production & Photoshoot", desc: "Cinematic videos and high-quality photography that tell your brand story and stop the scroll." },
   { icon: BarChart3, title: "Social Media Ads", desc: "Paid campaigns on Meta and TikTok that drive visibility, leads and sales. Boosting handled end-to-end." },
   { icon: Search, title: "SEO", desc: "On-page and technical SEO so customers find you on Google when it matters most." },
-  { icon: Globe, title: "Web Design & Development", desc: "Modern, responsive websites tailored to your business — fast, beautiful and built to convert." },
+  { icon: Globe, title: "Web Design & Development", desc: "Modern, responsive websites tailored to your business fast, beautiful and built to convert." },
   { icon: Camera, title: "Social Media Audit", desc: "We analyze your accounts to surface strengths, gaps and quick wins for your online strategy." },
   { icon: Sparkles, title: "Influencer Marketing", desc: "Curated TikTok and Instagram creators to expand reach and build authentic brand awareness." },
 ];
@@ -50,7 +50,7 @@ const prodPackages = [
 
 const whyUs = [
   { title: "Expertise & Experience", desc: "4+ years building brands across Nepal with a team of cinematographers, designers and strategists." },
-  { title: "Customized Strategy", desc: "Every plan is shaped around your brand identity, audience and growth goals — never copy-paste." },
+  { title: "Customized Strategy", desc: "Every plan is shaped around your brand identity, audience and growth goals never copy-paste." },
   { title: "High-Quality Content", desc: "Professional-grade photography, videography and graphics shot on cameras and drones." },
   { title: "End-to-End Solutions", desc: "From brand identity to ad campaigns, you get one team handling the full marketing stack." },
 ];
@@ -59,7 +59,7 @@ const process = [
   { step: "01", title: "Discover", desc: "We learn your brand, audience and goals through a deep-dive workshop." },
   { step: "02", title: "Strategize", desc: "Custom content calendar, channel plan and creative direction tailored to you." },
   { step: "03", title: "Create", desc: "Professional shoots, edits and graphics produced by our in-house team." },
-  { step: "04", title: "Grow", desc: "Publish, boost and optimize — with monthly reporting on what is working." },
+  { step: "04", title: "Grow", desc: "Publish, boost and optimize with monthly reporting on what is working." },
 ];
 
 function Section({ id, children, className = "" }) {
@@ -328,7 +328,7 @@ export default function HomePage() {
           </div>
           <ul className="space-y-6">
             {[
-              "Minimum engagement period is yearly — to build presence that compounds.",
+              "Minimum engagement period is yearly to build presence that compounds.",
               "Every campaign is coordinated with your team for proper functioning.",
               "Impromptu revisions and new strategies formulated as needed.",
               "Timely payments ensure smooth continuation and consistent progress.",
