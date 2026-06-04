@@ -3,7 +3,7 @@ import { Check, ChevronRight, Camera, Megaphone, Video, BarChart3, Globe, Search
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ClientsMarquee from "@/components/ClientsMarquee";
-import  ReelsGrid from "@/components/ReelsGrid";
+import  ReelsGrid from "@/components/ReelsGridInsta";
 
 export const metadata = {
   title: "The Creators House — Digital Marketing Agency in Nepal",
