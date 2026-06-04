@@ -27,8 +27,8 @@ function VideoCard({ src }) {
 
 export default function ReelsGrid() {
   return (
-    <section className="py-24 px-6 border-b border-white/10 bg-[#010101]">
-      <div className="max-w-7xl mx-auto">
+    <section className="site-section border-b border-white/10 bg-[#010101]">
+      <div className="site-container mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div>
