@@ -64,15 +64,22 @@ export default function QuotePage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <section className="py-20 md:py-28 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <section className="site-section">
+        <div className="site-container mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-foreground/15 text-xs font-medium uppercase tracking-widest mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Get a quote
           </div>
+          {/* <h1 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
+            Share your project.{" "}
+            <span className="bg-accent px-2">Get a quote in 48 hours.</span>
+          </h1> */}
           <h1 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
-            Tell us about your project.{" "}
-            <span className="bg-accent px-2">Quote in 48 hours.</span>
+            Share your project. Get a quote{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10"> within 48 hours.</span>
+              <span className="absolute inset-x-0 bottom-1 h-4 md:h-6 bg-accent -z-0" />
+            </span>
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl">
             Fill out the form below. We&apos;ll review the details and reply
@@ -81,8 +88,8 @@ export default function QuotePage() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
-        <div className="max-w-5xl mx-auto">
+      <section className="site-section">
+        <div className="site-container mx-auto">
           <form onSubmit={onSubmit} className="space-y-12">
             {/* Step 1 */}
             <Step number="01" title="About you">

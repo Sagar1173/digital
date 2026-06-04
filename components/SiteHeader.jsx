@@ -19,7 +19,7 @@ export default function SiteHeader() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur">
       <nav className="site-container relative flex h-16 items-center justify-between gap-6">
         <Link
           href="/"

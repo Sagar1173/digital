@@ -3,16 +3,47 @@ import { Check, ChevronRight, Camera, Megaphone, Video, BarChart3, Globe, Search
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import ClientsMarquee from "@/components/ClientsMarquee";
-import  ReelsGrid from "@/components/ReelsGridInsta";
+import ReelsGrid from "@/components/ReelsGrid";
 
 export const metadata = {
-  title: "The Creators House — Digital Marketing Agency in Nepal",
+  title: "The Creators House | Creative & Digital Agency Nepal",
   description:
-    "Kathmandu-based digital marketing, branding, video production and web development agency helping brands grow online.",
+    "Nepal's premier full-service creative agency — advertising, digital marketing, and web development under one roof. Based in Kathmandu, serving brands across Nepal.",
+  keywords: [
+    "digital marketing agency Nepal",
+    "digital marketing agency Kathmandu",
+    "web development company Nepal",
+    "advertising agency Nepal",
+    "social media marketing Nepal",
+    "SEO services Nepal",
+    "website design Kathmandu",
+    "content creation Nepal",
+    "branding agency Nepal",
+    "Google Ads Nepal",
+    "The Creators House",
+    "Dhakal Digital Solutions",
+  ],
   openGraph: {
-    title: "The Creators House — Digital Marketing Agency in Nepal",
+    title: "The Creators House | Creative & Digital Agency Nepal",
     description:
-      "Kathmandu-based digital marketing, branding, video production and web development agency helping brands grow online.",
+      "Nepal's premier full-service creative agency — advertising, digital marketing, and web development under one roof. Based in Kathmandu, serving brands across Nepal.",
+    url: "https://www.thecreatorshouse.com.np",
+    siteName: "The Creators House",
+    locale: "en_NP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Creators House | Creative & Digital Agency Nepal",
+    description:
+      "Nepal's premier full-service creative agency — advertising, digital marketing, and web development under one roof. Based in Kathmandu, serving brands across Nepal.",
+  },
+  alternates: {
+    canonical: "https://www.thecreatorshouse.com.np",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -64,7 +95,7 @@ const process = [
 
 function Section({ id, children, className = "" }) {
   return (
-    <section id={id} className={`py-24 px-6 ${className}`}>
+    <section id={id} className={` ${className}`}>
       {children}
     </section>
   );
@@ -85,8 +116,8 @@ export default function HomePage() {
       <SiteHeader />
 
       {/* HERO */}
-      <Section className="pt-8 md:pt-20 pb-28 border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <Section className="site-section">
+        <div className="site-container mx-auto">
           <SectionLabel>Digital Marketing Agency · Kathmandu, Nepal</SectionLabel>
           <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
             We build brands <br className="hidden md:block" />
@@ -113,7 +144,7 @@ export default function HomePage() {
               Start a project
             </Link>
           </div>
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-border">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 ">
             {[["4+", "Years in the game"], ["20+", "Brands trusted us"], ["10", "Core services"], ["100%", "In-house team"]].map(([n, l]) => (
               <div key={l}>
                 <div className="font-display text-4xl md:text-5xl font-bold">{n}</div>
@@ -125,8 +156,8 @@ export default function HomePage() {
       </Section>
 
       {/* ABOUT */}
-      <Section className="border-b border-border">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+      <Section className="site-section">
+        <div className="site-container mx-auto grid md:grid-cols-2 gap-16">
           <div>
             <SectionLabel>About us</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -148,8 +179,8 @@ export default function HomePage() {
       </Section>
 
       {/* WHY US */}
-      <Section className="bg-foreground text-background border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <Section className="site-section bg-foreground text-background">
+        <div className="site-container mx-auto">
           <SectionLabel>Why us</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
             Your <span className="bg-accent text-foreground px-2">ideal partner</span> for marketing in Nepal.
@@ -167,8 +198,8 @@ export default function HomePage() {
       </Section>
 
       {/* SERVICES */}
-      <Section id="services" className="border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <Section id="services" className="site-section">
+        <div className="site-container mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
             <div>
               <SectionLabel>What we do</SectionLabel>
@@ -196,8 +227,8 @@ export default function HomePage() {
       </Section>
 
       {/* PROCESS */}
-      <Section className="border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <Section className="site-section">
+        <div className="site-container mx-auto">
           <SectionLabel>How we work</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-2xl">
             A simple four-step process built for momentum.
@@ -215,8 +246,8 @@ export default function HomePage() {
       </Section>
 
       {/* SOCIAL MEDIA PACKAGES */}
-      <Section id="packages" className="bg-muted border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <Section id="packages" className="site-section">
+        <div className="site-container mx-auto">
           <SectionLabel>Packages · Social media marketing</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
             Pick a monthly plan. We handle the rest.
@@ -256,8 +287,8 @@ export default function HomePage() {
       </Section>
 
       {/* PRODUCTION PACKAGES */}
-      <Section className="border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <Section className="site-section border-b border-border">
+        <div className="site-container mx-auto">
           <SectionLabel>Packages · Production</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
             Cinematic video & photo production.
@@ -292,12 +323,12 @@ export default function HomePage() {
           </p>
         </div>
       </Section>
-      
 
-      {/* <ReelsGrid /> */}
+
+      <ReelsGrid />
       {/* CLIENTS — marquee */}
-      <Section id="work" className="bg-foreground text-background border-b border-border">
-        <div className="max-w-7xl mx-auto mb-12">
+      <Section id="work" className="site-section bg-foreground text-background border-b border-border">
+        <div className="site-container mx-auto mb-12">
           <SectionLabel>Trusted by</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight max-w-3xl">
             20+ brands across Nepal trust us with their story.
@@ -307,8 +338,8 @@ export default function HomePage() {
       </Section>
 
       {/* NOTES */}
-      <Section className="border-b border-border">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+      <Section className="site-section border-b border-border">
+        <div className="site-container mx-auto grid md:grid-cols-2 gap-16">
           <div>
             <SectionLabel>Working with us</SectionLabel>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">

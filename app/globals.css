@@ -85,4 +85,12 @@
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
+@layer components {
+.site-container {
+@apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
 
+.site-section {
+@apply py-10 md:py-20;
+}
+}

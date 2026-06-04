@@ -1,8 +1,8 @@
 // import { createFileRoute } from "@tanstack/react-router";
 import Link from "next/link";
 import { ChevronRight, Check, Camera, Megaphone, Video, BarChart3, Globe, Search, Users, Sparkles } from "lucide-react";
-import  SiteHeader  from "@/components/SiteHeader";
-import SiteFooter  from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 // export const Route = createFileRoute("/services")({
 //   head: () => ({
@@ -105,8 +105,8 @@ export default function ServicesPage() {
       <SiteHeader />
 
       {/* Hero */}
-      <section className="py-20 md:py-28 px-6 border-b border-border">
-        <div className="max-w-7xl mx-auto">
+      <section className="site-section">
+        <div className="site-container mx-auto">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-foreground/15 text-xs font-medium uppercase tracking-widest mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Services
@@ -115,13 +115,13 @@ export default function ServicesPage() {
             Everything you need to grow online.{" "}
             <span className="bg-accent px-2 mt-8">Under one roof.</span>
           </h1> */}
-         <h1 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
-  Everything you need to grow online.{" "}
-  <span className="relative inline-block whitespace-nowrap">
-    <span className="relative z-10">Under one roof.</span>
-    <span className="absolute inset-x-0 bottom-1 h-4 md:h-6 bg-accent -z-0" />
-  </span>
-</h1>
+          <h1 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
+            Your complete digital growth solution,{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10">Under one roof.</span>
+              <span className="absolute inset-x-0 bottom-1 h-4 md:h-6 bg-accent -z-0" />
+            </span>
+          </h1>
           <p className="mt-8 px-1text-lg md:text-xl text-muted-foreground max-w-2xl">
             From strategy and content to ads and websites eight specialized services delivered by one in-house team.
           </p>
@@ -129,8 +129,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Service detail blocks */}
-      <section className="px-6">
-        <div className="max-w-7xl mx-auto divide-y divide-border">
+      {/* <section className="px-6">
+        <div className="site-container mx-auto divide-y divide-border">
           {services.map((s, i) => (
             <div key={s.title} id={s.title.toLowerCase().replace(/[^a-z]+/g, "-")} className="py-16 md:py-20 grid md:grid-cols-12 gap-8">
               <div className="md:col-span-1">
@@ -164,11 +164,67 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
+      </section> */}
+      <section className="">
+        <div className="site-container mx-auto  divide-border">
+          {services.map((s, i) => (
+            <div
+              key={s.title}
+              id={s.title.toLowerCase().replace(/[^a-z]+/g, "-")}
+              className="py-10 md:py-20 flex flex-col lg:flex-row justify-between gap-10 lg:gap-16"
+            >
+              {/* Left Side */}
+              <div className="w-full lg:w-[42%]">
+                <div className="font-display px-2 pb-4 font-bold text-2xl text-muted-foreground">
+                  0{i + 1}
+                </div>
+
+                <div className="w-14 h-14 bg-accent flex items-center justify-center mb-6">
+                  <s.icon className="w-7 h-7" strokeWidth={1.5} />
+                </div>
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                  {s.title}
+                </h2>
+
+                <p className="mt-4 text-base md:text-lg text-muted-foreground max-w-xl">
+                  {s.short}
+                </p>
+
+                <Link
+                  href="/quote"
+                  className="mt-6 inline-flex items-center gap-1.5 bg-foreground text-background px-5 py-3 font-semibold rounded-md hover:bg-foreground/90 transition-colors"
+                >
+                  Request a quote
+                  <ChevronRight className="w-4 h-4" />
+                </Link>
+              </div>
+
+              {/* Right Side */}
+              <div className="w-full lg:w-[50%]">
+                <div className="border border-border p-6 md:p-8 lg:p-10 h-full">
+                  <div className="text-xs uppercase tracking-widest font-bold text-muted-foreground mb-6">
+                    What's included
+                  </div>
+
+                  <ul className="space-y-4">
+                    {s.details.map((d) => (
+                      <li key={d} className="flex gap-3">
+                        <Check className="w-5 h-5 mt-0.5 shrink-0 text-foreground" />
+                        <span className="text-sm md:text-base">{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* CTA strip */}
-      <section className="px-6 py-20 border-t border-border bg-muted">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <section className="site-section">
+        <div className="site-container mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h3 className="text-2xl md:text-3xl font-bold">Not sure where to start?</h3>
             <p className="mt-2 text-muted-foreground">Book a free 20-minute strategy call. We'll point you in the right direction.</p>

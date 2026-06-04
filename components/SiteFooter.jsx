@@ -4,8 +4,8 @@ import { FiInstagram, FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 
 export default function SiteFooter() {
   return (
-    <section className="bg-accent text-foreground py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-accent text-foreground site-section">
+      <div className="site-container mx-auto">
         <h2 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
           Let's build something worth watching.
         </h2>
