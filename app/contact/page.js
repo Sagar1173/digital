@@ -37,7 +37,7 @@ export default function ContactPage() {
             <span className="bg-accent px-2">your brand.</span>
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl">
-            Have a project, a question or just want to say hi? Drop us a line —
+            Have a project, a question or just want to say hi? Drop us a line
             we usually reply within one business day.
           </p>
         </div>

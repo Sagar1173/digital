@@ -32,8 +32,8 @@ const linkClass = "hover:opacity-60 transition-opacity";
 
 export default function SiteHeader() { 
   return ( 
-    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-border"> 
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 h-16"> 
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur "> 
+      <nav className="max-w-7xl mx-auto flex items-center justify-between h-16"> 
         
         {/* Logo Container */}
         <Link href="/" className="font-display font-bold text-lg tracking-tight flex items-center gap-2"> 

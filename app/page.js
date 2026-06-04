@@ -85,7 +85,7 @@ export default function HomePage() {
       <SiteHeader />
 
       {/* HERO */}
-      <Section className="pt-20 pb-28 border-b border-border">
+      <Section className="pt-8 md:pt-20 pb-28 border-b border-border">
         <div className="max-w-7xl mx-auto">
           <SectionLabel>Digital Marketing Agency · Kathmandu, Nepal</SectionLabel>
           <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
@@ -97,7 +97,7 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl">
-            The Creators House by Dhakal Digital Solutions — a full-service digital marketing, branding, video production and web development studio based in Kathmandu.
+            The Creators House by Dhakal Digital Solutions a full-service digital marketing, branding, video production and web development studio based in Kathmandu.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <a
@@ -138,7 +138,7 @@ export default function HomePage() {
               <span className="text-foreground font-semibold">The Creators House</span>, operated under Dhakal Digital Solutions Pvt. Ltd., is a Kathmandu-based agency helping brands win attention, trust and customers across digital channels.
             </p>
             <p>
-              With more than <span className="text-foreground font-semibold">4 years of experience</span> in online marketing, we have built a reputation for solving real branding and growth challenges — not just posting pretty pictures.
+              With more than <span className="text-foreground font-semibold">4 years of experience</span> in online marketing, we have built a reputation for solving real branding and growth challenges not just posting pretty pictures.
             </p>
             <p>
               Our team includes cinematographers, videographers, editors, content creators, writers, brand identity designers, creative designers, digital and social media marketers, and a creative director.
@@ -156,7 +156,7 @@ export default function HomePage() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px mt-16 bg-background/10">
             {whyUs.map((w, i) => (
-              <div key={w.title} className="bg-foreground p-8">
+              <div key={w.title} className="bg-foreground pl-2 pr-8 py-8">
                 <div className="font-display text-accent text-sm font-bold">0{i + 1}</div>
                 <h3 className="mt-4 text-xl font-bold">{w.title}</h3>
                 <p className="mt-3 text-background/70 leading-relaxed">{w.desc}</p>
@@ -182,7 +182,7 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
             {services.map((s) => (
-              <Link href="/services" key={s.title} className="bg-background p-8 group hover:bg-accent transition-colors block">
+              <Link href="/services" key={s.title} className="bg-background pr-8 pl-2 py-8 group hover:bg-accent transition-colors block">
                 <s.icon className="w-8 h-8" strokeWidth={1.5} />
                 <h3 className="mt-6 text-lg font-bold">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground group-hover:text-foreground leading-relaxed">{s.desc}</p>
@@ -263,7 +263,7 @@ export default function HomePage() {
             Cinematic video & photo production.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Promotional videos, event coverage and branded commercials — polished, premium and built to perform.
+            Promotional videos, event coverage and branded commercials polished, premium and built to perform.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mt-16">
             {prodPackages.map((p) => (
@@ -294,7 +294,7 @@ export default function HomePage() {
       </Section>
       
 
-      <ReelsGrid />
+      {/* <ReelsGrid /> */}
       {/* CLIENTS — marquee */}
       <Section id="work" className="bg-foreground text-background border-b border-border">
         <div className="max-w-7xl mx-auto mb-12">

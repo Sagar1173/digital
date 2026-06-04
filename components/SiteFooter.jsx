@@ -40,8 +40,18 @@ export default function SiteFooter() {
 
         <footer className="mt-20 pt-8 border-t border-foreground/20 flex flex-col md:flex-row justify-between gap-6 text-sm">
           <div>
-            <div className="font-display font-bold text-lg">The Creators House</div>
-            <div className="text-foreground/70 mt-1">by Dhakal Digital Solutions Pvt. Ltd.</div>
+            {/* <div className="font-display font-bold text-lg">The Creators House</div>
+            <div className="text-foreground/70 mt-1">by Dhakal Digital Solutions Pvt. Ltd.</div> */}
+            <Link href="/" className="font-display font-bold text-lg tracking-tight flex items-center gap-2"> 
+          {/* <div className="flex items-center">
+            The Creators <span className="bg-accent px-1.5 ml-1">House</span> 
+          </div> */}
+          <img 
+            src="/brandlogo.png" 
+            alt="Brand Logo" 
+            className="h-26 w-auto object-contain" 
+          /> 
+        </Link> 
           </div>
           <div className="flex items-center gap-6">
             <a href="https://www.instagram.com/the.creators.house" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:underline">

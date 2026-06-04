@@ -111,11 +111,18 @@ export default function ServicesPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Services
           </div>
-          <h1 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
+          {/* <h1 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
             Everything you need to grow online.{" "}
-            <span className="bg-accent px-2">Under one roof.</span>
-          </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl">
+            <span className="bg-accent px-2 mt-8">Under one roof.</span>
+          </h1> */}
+         <h1 className="font-display font-bold text-5xl md:text-7xl leading-[0.95] max-w-4xl">
+  Everything you need to grow online.{" "}
+  <span className="relative inline-block whitespace-nowrap">
+    <span className="relative z-10">Under one roof.</span>
+    <span className="absolute inset-x-0 bottom-1 h-4 md:h-6 bg-accent -z-0" />
+  </span>
+</h1>
+          <p className="mt-8 px-1text-lg md:text-xl text-muted-foreground max-w-2xl">
             From strategy and content to ads and websites — eight specialized services delivered by one in-house team.
           </p>
         </div>
@@ -127,7 +134,7 @@ export default function ServicesPage() {
           {services.map((s, i) => (
             <div key={s.title} id={s.title.toLowerCase().replace(/[^a-z]+/g, "-")} className="py-16 md:py-20 grid md:grid-cols-12 gap-8">
               <div className="md:col-span-1">
-                <div className="font-display font-bold text-2xl text-muted-foreground">
+                <div className="font-display px-2 font-bold text-2xl text-muted-foreground">
                   0{i + 1}
                 </div>
               </div>
