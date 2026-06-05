@@ -1,6 +1,7 @@
 "use client";
 
 import { FiInstagram } from "react-icons/fi";
+import { useEffect, useRef } from "react";
 
 const videos = [
   "https://50cagafsvzsoyz75.public.blob.vercel-storage.com/Creator%20House.mp4",
@@ -9,17 +10,27 @@ const videos = [
 ];
 
 function VideoCard({ src }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.log("Autoplay prevented:", error);
+      });
+    }
+  }, []);
+
   return (
-    <div className="bg-[#010101] rounded-lg overflow-hidden border border-white/10 aspect-[9/16] relative w-full group">
+    <div className="bg-[#010101] rounded-3xl overflow-hidden border border-white/10 aspect-[9/16] relative w-full group shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(255,216,0,0.15)] transition-all duration-300">
       <video
+        ref={videoRef}
         src={src}
-        controls
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover rounded-3xl"
       />
     </div>
   );

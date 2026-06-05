@@ -5,16 +5,6 @@ import { ChevronRight, Check } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
-// export const metadata = {
-//   title: "Get a Quote — The Creators House",
-//   description:
-//     "Request a tailored quote for digital marketing, video production, SEO or web development services.",
-//   openGraph: {
-//     title: "Get a Quote — The Creators House",
-//     description:
-//       "Tell us about your project and get a tailored proposal within 48 hours.",
-//   },
-// };
 
 const serviceOptions = [
   "Digital Marketing & Branding",
@@ -62,6 +52,18 @@ export default function QuotePage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Get a Quote | The Creators House",
+            "description": "Request a tailored quote for digital marketing, video production, SEO or web design services from The Creators House.",
+            "url": "https://www.thecreatorshouse.com.np/quote"
+          })
+        }}
+      />
       <SiteHeader />
 
       <section className="site-section">

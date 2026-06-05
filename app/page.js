@@ -47,17 +47,7 @@ export const metadata = {
   },
 };
 
-const services = [
-  { icon: Megaphone, title: "Digital Marketing & Branding", desc: "Professional photoshoots, video ads and creative graphics built for Facebook, Instagram, LinkedIn, X and TikTok." },
-  { icon: Users, title: "Social Media Management", desc: "We post, engage and analyze. Your accounts stay active, on-brand and growing every week." },
-  { icon: Video, title: "Video Production & Photoshoot", desc: "Cinematic videos and high-quality photography that tell your brand story and stop the scroll." },
-  { icon: BarChart3, title: "Social Media Ads", desc: "Paid campaigns on Meta and TikTok that drive visibility, leads and sales. Boosting handled end-to-end." },
-  { icon: Search, title: "SEO", desc: "On-page and technical SEO so customers find you on Google when it matters most." },
-  { icon: Globe, title: "Web Design & Development", desc: "Modern, responsive websites tailored to your business fast, beautiful and built to convert." },
-  { icon: Camera, title: "Social Media Audit", desc: "We analyze your accounts to surface strengths, gaps and quick wins for your online strategy." },
-  { icon: Sparkles, title: "Influencer Marketing", desc: "Curated TikTok and Instagram creators to expand reach and build authentic brand awareness." },
-];
-
+import { services } from "@/data/services";
 const smPackages = [
   {
     name: "Basic", price: "Rs 25,000", posts: "14 posts / month",
@@ -113,42 +103,77 @@ function SectionLabel({ children }) {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "The Creators House",
+            "url": "https://www.thecreatorshouse.com.np",
+            "logo": "https://www.thecreatorshouse.com.np/images/logo.png",
+            "image": "https://www.thecreatorshouse.com.np/images/hero.jpg",
+            "description": "Nepal's premier full-service creative agency — advertising, digital marketing, and web development under one roof. Based in Kathmandu.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Kathmandu",
+              "addressCountry": "NP"
+            },
+            "sameAs": [
+              "https://www.facebook.com/thecreatorshouse",
+              "https://www.instagram.com/thecreatorshouse"
+            ]
+          })
+        }}
+      />
       <SiteHeader />
 
       {/* HERO */}
-      <Section className="site-section">
-        <div className="site-container mx-auto">
-          <SectionLabel>Digital Marketing Agency · Kathmandu, Nepal</SectionLabel>
-          <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-5xl">
-            We build brands <br className="hidden md:block" />
-            that{" "}
-            <span className="relative inline-block">
-              <span className="relative z-10">stop the scroll.</span>
-              <span className="absolute inset-x-0 bottom-1 h-4 md:h-6 bg-accent -z-0" />
-            </span>
+      <Section className="site-section overflow-hidden pt-20 pb-32 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
+        <div className="site-container mx-auto text-center relative z-10 flex flex-col items-center">
+
+          <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-tight max-w-6xl mt-4">
+            Building brands that stop the scroll.
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl">
+          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             The Creators House by Dhakal Digital Solutions a full-service digital marketing, branding, video production and web development studio based in Kathmandu.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <a
               href="#packages"
-              className="inline-flex items-center gap-1.5 bg-foreground text-background px-6 py-3.5 font-semibold rounded-md hover:bg-foreground/90"
+              className="inline-flex items-center gap-1.5 bg-foreground text-background px-8 py-4 font-semibold rounded-md hover:bg-foreground/90 transition-colors"
             >
-              See packages <ChevronRight className="w-4 h-4" />
+              See packages <ChevronRight className="w-5 h-5" />
             </a>
             <Link
               href="/quote"
-              className="inline-flex items-center gap-1.5 bg-accent text-foreground px-6 py-3.5 font-semibold rounded-md hover:opacity-90"
+              className="inline-flex items-center gap-1.5 bg-accent text-foreground px-8 py-4 font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
               Start a project
             </Link>
           </div>
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 ">
+          
+          {/* Tilted Cards Row */}
+          <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 px-4 md:px-0">
+            {services.slice(0, 4).map((s, i) => {
+              const rotation = i % 2 === 0 ? "rotate-2" : "-rotate-2";
+              const translateY = i % 2 === 0 ? "translate-y-2" : "-translate-y-2";
+              return (
+                <div key={s.slug} className={`bg-foreground text-background p-6 rounded-2xl shadow-xl transform transition-transform hover:rotate-0 hover:translate-y-0 ${rotation} ${translateY}`}>
+                  <s.icon className="w-8 h-8 mb-4 text-accent" />
+                  <h3 className="font-bold text-lg leading-tight mb-2">{s.title}</h3>
+                  <p className="text-sm text-background/70">{s.short}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-32 grid grid-cols-2 md:grid-cols-4 gap-8 w-full border-t border-border pt-12 text-left">
             {[["4+", "Years in the game"], ["20+", "Brands trusted us"], ["10", "Core services"], ["100%", "In-house team"]].map(([n, l]) => (
-              <div key={l}>
+              <div key={l} className="flex flex-col items-center md:items-start">
                 <div className="font-display text-4xl md:text-5xl font-bold">{n}</div>
-                <div className="text-sm text-muted-foreground mt-1">{l}</div>
+                <div className="text-sm text-muted-foreground mt-2">{l}</div>
               </div>
             ))}
           </div>
@@ -213,7 +238,7 @@ export default function HomePage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
             {services.map((s) => (
-              <Link href="/services" key={s.title} className="bg-background pr-8 pl-2 py-8 group hover:bg-accent transition-colors block">
+              <Link href={`/services/${s.slug}`} key={s.title} className="bg-background pr-8 pl-2 py-8 group hover:bg-accent transition-colors block">
                 <s.icon className="w-8 h-8" strokeWidth={1.5} />
                 <h3 className="mt-6 text-lg font-bold">{s.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground group-hover:text-foreground leading-relaxed">{s.desc}</p>

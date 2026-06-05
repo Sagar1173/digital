@@ -24,6 +24,18 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Us | The Creators House",
+            "description": "Get in touch with The Creators House. We're a Kathmandu based digital agency ready to help grow your brand online.",
+            "url": "https://www.thecreatorshouse.com.np/contact"
+          })
+        }}
+      />
       <SiteHeader />
 
       <section className="site-section ">
