@@ -350,7 +350,7 @@ export default function HomePage() {
       </Section>
 
 
-      <ReelsGrid />
+      {/* <ReelsGrid /> */}
       {/* CLIENTS — marquee */}
       <Section id="work" className="site-section bg-foreground text-background border-b border-border">
         <div className="site-container mx-auto mb-12">
